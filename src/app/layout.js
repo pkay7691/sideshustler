@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Header from "../components/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,8 +20,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+       <Header />
+        <main className="container mx-auto p-4">{children}</main>
+        <footer className="bg-gray-800 text-white text-center p-4">
+          &copy; {new Date().getFullYear()} My Website
+        </footer>
       </body>
     </html>
   );
