@@ -1,2 +1,44 @@
 @import "tailwindcss";
+body {
+  background: #000;
+  color: white;
+}
 
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  list-style: none;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+
+
+}
+
+/* Utility classes */
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* Additional utility classes */
