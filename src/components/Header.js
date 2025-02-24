@@ -14,7 +14,7 @@ const Header = () => {
       <nav id="main-nav">
         <ul>
  
-          <li><Link href="/">Side-Hustle.io</Link></li>
+          <li><Link href="/"><span className={squadaOne.className}>Side-Hustle.io</span></Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/contact">Contact</Link></li>
           <li><Link href="/blogs">Blogs</Link></li>
