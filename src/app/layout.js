@@ -34,13 +34,16 @@ export default function RootLayout({ children }) {
       <body className={geistSans.className}>
        <Header />
         <main className="container mx-auto p-4">
-          <Analytics />
-          {children}</main>
+          
+          {children}
+          
+          </main>
 
         <footer className="bg-gray-800 text-white text-center p-4">
           <AffiliateDisclosure />
           &copy; {new Date().getFullYear()} Side-Hustle.io
         </footer>
+        <Analytics />
       </body>
     </html>
   );
