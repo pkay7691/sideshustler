@@ -1,15 +1,22 @@
+import { Squada_One } from 'next/font/google';
 import React from 'react';
+import Link from 'next/link';
+
+
+const squadaOne = Squada_One({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const Header = () => {
   return (
     <header>
-      <h1>Welcome to Side Hustler</h1>
-      <nav>
+      <nav id="main-nav">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/blogs">Blogs</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link href="/"><span className={squadaOne.className}>Side-Hustle.io</span></Link></li>
+          <li><Link href="/about">About</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/blogs">Blogs</Link></li>
         </ul>
       </nav>
     </header>
