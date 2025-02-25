@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Squada_One } from "next/font/google";
 import Header from "../components/Header";
 import AffiliateDisclosure from '../components/AffiliateDisclosure'
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={geistSans.className}>
        <Header />
-        <main className="container mx-auto p-4">{children}</main>
+        <main className="container mx-auto p-4">
+          <Analytics />
+          {children}</main>
 
         <footer className="bg-gray-800 text-white text-center p-4">
           <AffiliateDisclosure />
