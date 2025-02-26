@@ -16,7 +16,7 @@ const Header = () => {
           <li><Link href="/"><span className={squadaOne.className}>Side-Hustle.io</span></Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          <li><Link href="/blogs">Blogs</Link></li>
+          <li><Link href="/blog">Blogs</Link></li>
         </ul>
       </nav>
     </header>
