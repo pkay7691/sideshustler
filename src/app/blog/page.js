@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import { createClient } from "@/utils/supabase/server";
 
-async function getBlogPost() {
-  const supabase = createServerComponentClient({ cookies });
+async function getBlogPosts() {
+  let supabase = await createClient()
+
+  // const supabase = createServerComponentClient({ cookies });
   const { data, error } = await supabase
     .from("blog_posts")
     .select("id, user_id, title, slug, content, featured_image, status, published_at, created_at")
@@ -19,7 +22,7 @@ async function getBlogPost() {
 }
 
 export default async function Blogs() {
-  const { posts, error } = await getBlogPost();
+  const { posts, error } = await getBlogPosts();
 
   if (error) {
     return <p style={{ color: "red" }}>{error}</p>;
