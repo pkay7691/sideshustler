@@ -9,7 +9,7 @@ async function getBlogPost(slug) {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from("blog_posts")
-    .select("id, user_id:users(name), title, slug, content, featured_image, status, published_at, created_at")
+    .select("id, user_id:users(username), title, slug, content, featured_image, status, published_at, created_at")
     .eq("slug", slug)
     .eq("status", "published") // Only show published posts
     .single(); // Fetch only one post
